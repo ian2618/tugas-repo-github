@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html { 
+    scroll-behavior: smooth; 
+}
+body {
+    background-color: #081b29;
+    color: white;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.nama {
+    position: relative;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+.nama::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+.navbar a {
+    font-size: 1.125em;
+    font-weight: 300;
+    color: white;
+    margin-left: 6rem;
+    text-decoration: none;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: cyan;
+    font-size: 30px;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 20vh;
+}
+.img-logo {
+    max-width: 100%;
+    background: transparent;
+    border: 5px solid black;
+    border-radius: 100%;
+    box-shadow: white;
+}
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url(imgHalaman/W4JOKI.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home-konten {
+    max-width: 600px;
+}
+.home-konten h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-konten h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-konten h3 {
+    position: relative;
+    font-size: 32px;
+    font-size: 700;
+    color: cyan;
+}
+.home-konten h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+.home-konten p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-konten p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+.home-konten .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+.home-konten .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid#00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box a:hover {
+    color: #00abf0;
+}
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before {
+    width: 100%;
+}
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 750px;
+    height: 100%;
+    background: transparent;
+    transition: .3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+.home-imgHover:hover {
+    background: black;
+    opacity: .8;
+}
+.home-imgHover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+/* DIATAS BAGIAN HALAMAN UTAMA/BERANDA */
+
+/* BAGIAN VIEW DETAIL */
+.konten {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 0 10%;
+    background: black;
+}
+.detail {
+    background: black;
+    text-align: center;
+    top: 0;
+    left: 0;
+    padding: 5% 5%;
+    overflow: hidden;
+}
+.detail h2 {
+    font-size: 42px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.detail p {
+    position: relative;
+    margin: 20px 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+}
+.konten .detail .img-detail { 
+    max-width: 100%;
+    max-height: 100%;
+    left: 0;
+    top: 0;
+    padding: 5% 30px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Jarak antar gambar */ 
+    overflow: hidden;
+    
+}
+.konten .img-detail img{
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.9);
+}
+.img-wrapper {
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 2s ease-out, transform 1.6s ease-out;
+}
+.img-wrapper .desc {
+    margin: 10px 0;
+    font-size: 12px;
+    font-weight: 700;
+    max-height: fit-content;
+}
+.img-wrapper :hover{
+    transform: scale(1.2);
+}
+.img-wrapper:nth-child(even) {
+    transform: translateX(50px);
+}
+/* BAGIAN KONTAK */
+.kontak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10%;
+    background-color: black;
+    height: 100vh;
+}
+.kontak h1 {
+    margin-top: 10%;
+    font-weight: 600;
+}
+.kontak p {
+    max-width: 100%;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+.sosmed {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.sosmed a {
+    font-size: 48px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+.sosmed a:hover {
+    transform: scale(2);
+    color: cyan;
+}
+.footer {
+    margin-top: 10%;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    display: flex;
+    justify-items: center;
+}
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+    .header {
+        padding: 10px 2%;
+        gap: 115px;
+    }
+    .navbar {
+        margin-left: 10px;
+        font-size: 1em;
+    }
+    .navbar a.active {
+        font-size: 1em;
+    }
+    .home {
+        padding: 0 5%;
+        background-size: cover;
+        background-position: center;
+    }
+    .home-konten h1 {
+        font-size: 36px;
+    }
+    .home-konten h3 {
+        font-size: 24px;
+    }
+    .home-konten p {
+        font-size: 10px;
+        max-width: 50%;
+    }
+    .home-konten .btn-box {
+        flex-direction: column;
+        width: 50%;
+        height: 10%;
+    }
+    .home-konten .btn-box a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .konten .detail .img-detail {
+        gap: 9px;
+        
+    }
+    .img-view {
+        width: 75px;
+        height: 100px;
+    }
+    .img-wrapper {
+        max-width: 100%;
+    }
+    .img-wrapper :hover {
+        height: 200px;
+        width: 200px;
+    }
+    .home-imgHover {
+        width: 100%;
+        right: 0; 
+    }
+    .konten {
+        padding: 0 5%;
+    }
+    .detail {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .detail h2 {
+        font-size: 32px;
+    }
+    .konten p {
+       font-size: 14px;
+    }
+    .kontak h1 {
+        font-size: 24px;
+    }
+    .kontak p {
+        font-size: 14px;
+    }
+    .sosmed a {
+        font-size: 24px;
+    }
+    .footer {
+        height: auto;
+    }
+}
